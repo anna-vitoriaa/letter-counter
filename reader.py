@@ -10,5 +10,13 @@ for letra in texto.lower():
         if letra == let:
             dict[let] = dict[let]+1
 
-           
+# calculando total de caracteres presentes no alfabeto
+total = 0
+for l in texto.lower():
+    if l in alph:
+        total+=1
 
+# calculando a porcentagem de cada letra e salvando em um dicionário]
+porc = {letra: 0 for letra in alph}
+for letra, quant in dict.items():
+    porc[letra] = quant*100/total
